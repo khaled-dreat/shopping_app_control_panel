@@ -27,9 +27,10 @@ part "../route/app_route.dart";
 // ?  ************************ features **************************
 //  ************************ Checkout **************************
 
-
 //  ************************ Home **************************
-
+part "../../features/home/presentation/cubit/home_cubit.dart";
+part "../../features/home/presentation/cubit/home_state.dart";
+part "../../features/home/presentation/view/home/home_view.dart";
 
 //  ************************ View **************************
 

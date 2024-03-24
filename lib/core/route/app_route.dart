@@ -2,7 +2,9 @@ part of "../import/app_import.dart";
 
 class AppRoute {
   // * Pages App
-  static Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{};
+  static Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
+    HomeView.nameRoute: (context) => const HomeView(),
+  };
 
   // * Inte Route
   static String inteRoute = HomeView.nameRoute;
