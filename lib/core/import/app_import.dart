@@ -19,10 +19,10 @@ import 'package:path/path.dart' as path;
 // import 'package:validators/validators.dart' as validators;
 
 //  ************************ App Start **************************
-part '../../app_sopping.dart/app_start.dart';
+part '../../my_app/app_start.dart';
 
 // ! ************************ Core **************************
-
+part "../route/app_route.dart";
 
 // ?  ************************ features **************************
 //  ************************ Checkout **************************
