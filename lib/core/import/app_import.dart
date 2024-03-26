@@ -72,9 +72,9 @@ part '../../features/products/presentation/view/add_products/widgets/add_img_pro
 part "../../features/products/presentation/view/add_products/widgets/custom_category_section.dart";
 part "../../features/products/presentation/view/add_products/widgets/add_img_products/custom_image_product_section.dart";
 
-
-//  ************************ Products Details **************************
-
+//  ************************ Category **************************
+part "../../features/category/presentation/cubit/category_cubit.dart";
+part "../../features/category/presentation/cubit/category_state.dart";
 
 //  ************************ login Page **************************
 
