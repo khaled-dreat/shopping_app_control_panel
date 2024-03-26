@@ -4,10 +4,11 @@ class AppRoute {
   // * Pages App
   static Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
     HomeView.nameRoute: (context) => const HomeView(),
+    AddProductView.nameRoute: (context) => const AddProductView(),
   };
 
   // * Inte Route
-  static String inteRoute = HomeView.nameRoute;
+  static String inteRoute = AddProductView.nameRoute;
 
   // * push Name
   static void go(BuildContext context, String nameRoute) =>
