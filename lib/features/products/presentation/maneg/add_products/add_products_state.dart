@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+=======
+>>>>>>> b0f1718 (test)
 part of '../../../../../core/import/app_import.dart';
 
 abstract class AddProductsState {}

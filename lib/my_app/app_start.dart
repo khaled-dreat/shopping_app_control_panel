@@ -5,18 +5,39 @@ class AppStart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(360, 690),
-      builder: (context, child) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        // * Theme
-        // TODO : theme: AppThemeChoose.light(context),
-        // TODO : darkTheme: AppThemeChoose.dark(context),
-        themeMode: ThemeMode.light,
-        // * Route
-        routes: AppRoute.routes,
-        initialRoute: AppRoute.inteRoute,
+    return MultiBlocProvider(
+      providers: providers,
+      child: ScreenUtilInit(
+        designSize: const Size(360, 690),
+        builder: (context, child) => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          // * Theme
+          // TODO : theme: AppThemeChoose.light(context),
+          // TODO : darkTheme: AppThemeChoose.dark(context),
+          themeMode: ThemeMode.light,
+          // * Route
+          routes: AppRoute.routes,
+          initialRoute: AppRoute.inteRoute,
+        ),
       ),
     );
   }
+}
+
+List<SingleChildWidget> get providers {
+  return [
+    BlocProvider(
+      create: (context) {
+        return CategoryCubit(
+            FetchAllCategoryUseCase(getIt.get<CategoryRepoImpl>()))
+          ..fetchAllCategory();
+      },
+    ),
+    BlocProvider(
+      create: (context) {
+        return AddProductsCubit(
+            AddProductUseCase(productRepo: getIt.get<ProductRepoImpl>()));
+      },
+    ),
+  ];
 }

@@ -1,5 +1,6 @@
 part of "../../../../../core/import/app_import.dart";
 
+<<<<<<< HEAD
 List<File?> images = []; // قائمة لتخزين الصور
 Map<String, File>? imgList;
 
@@ -40,5 +41,18 @@ class AddProductsCubit extends Cubit<AddProductsState> {
     } catch (e) {
       emit(AddProductsFailure(errMessage: e.toString()));
     }
+=======
+class AddProductsCubit extends Cubit<AddProductsState> {
+  AddProductsCubit(this.addProductUseCase) : super(AddProductsInitial());
+
+  ProductDataEntitie productDataModel = ProductDataEntitie();
+  final AddProductUseCase addProductUseCase;
+  void saveProduct() {
+    productDataModel.setImages([
+      "https://th.bing.com/th?id=ORMS.10f9b586fd30b840547323a0f5ed6ec3&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0"
+    ]);
+    productDataModel.setCategoryId("1");
+    addProductUseCase.call(productDataModel);
+>>>>>>> b0f1718 (test)
   }
 }
