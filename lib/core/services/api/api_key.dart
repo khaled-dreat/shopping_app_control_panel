@@ -8,5 +8,5 @@ class ApiKey {
 
   static const String categories = "categories";
   static const String assets = "assets";
-  // * Secret Key
+  static const String products = "products";
 }
