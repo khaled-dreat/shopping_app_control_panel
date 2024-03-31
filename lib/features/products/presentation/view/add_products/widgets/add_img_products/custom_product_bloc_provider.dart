@@ -18,11 +18,7 @@ class _CustomProductBlocProviderState extends State<CustomProductBlocProvider> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-<<<<<<< HEAD
-      create: (context) => AddProductsCubit(),
-=======
       create: (context) => AddImgProductsCubit(),
->>>>>>> b0f1718 (test)
       child: CustomBtnAddProductsBlocConsumer(
         keyOFList: widget.keyOFList,
         isDetailsImg: widget.isDetailsImg,

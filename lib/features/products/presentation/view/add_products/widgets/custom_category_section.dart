@@ -9,7 +9,7 @@ class CustomCategorySection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const DropDownSelectCategory(),
+        //  const DropDownSelectCategory(),
         CustomBtn(
           title: Icon(
             Icons.add,

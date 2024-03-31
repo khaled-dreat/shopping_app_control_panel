@@ -35,8 +35,8 @@ List<SingleChildWidget> get providers {
     ),
     BlocProvider(
       create: (context) {
-        return AddProductsCubit(
-            AddProductUseCase(productRepo: getIt.get<ProductRepoImpl>()));
+        return AddProductsCubit(AddProductAssetstUseCase(
+            productRepo: getIt.get<ProductRepoImpl>()));
       },
     ),
   ];
