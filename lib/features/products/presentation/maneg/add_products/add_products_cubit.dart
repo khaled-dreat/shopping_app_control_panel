@@ -4,7 +4,8 @@ part of "../../../../../core/import/app_import.dart";
 class AddProductsCubit extends Cubit<AddProductsState> {
   AddProductsCubit(this.addProductAssetstUseCase) : super(AddProductsInitial());
   final AddProductAssetstUseCase addProductAssetstUseCase;
+  ProductDataEntitie productEntitie = ProductDataEntitie();
   void saveProduct() {
-    addProductAssetstUseCase.call();
+    addProductAssetstUseCase.call(productEntitie);
   }
 }

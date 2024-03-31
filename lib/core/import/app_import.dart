@@ -58,6 +58,7 @@ part "../setup_service_locator/setup_service_locator.dart";
 part "../simple_bloc_observer/simple_bloc_observer.dart";
 part "../usecase/use_case.dart";
 part "../validators/app_validators.dart";
+part "../services/api/api_key.dart";
 part "../services/local_data/local_data_key.dart";
 
 // ?  ************************ features **************************
@@ -92,6 +93,7 @@ part "../../features/category/presentation/maneg/fetch_all_category_cubit/catego
 part "../../features/category/presentation/maneg/fetch_all_category_cubit/category_state.dart";
 part "../../features/products/presentation/maneg/add_img_products/add_img_products_state.dart";
 part "../../features/products/presentation/maneg/add_img_products/add_img_products_cubit.dart";
+part "../../features/products/domain/entities/product_data_entitie.dart";
 
 //  ************************ Category **************************
 part "../../features/category/domain/entities/category_entity.dart";

@@ -6,9 +6,10 @@ class ProductRepoImpl extends ProductRepo {
   ProductRepoImpl({required this.productsReomteDataSource});
 
   @override
-  Future<Either<Failure, NoParam>> addProductAssets() async {
+  Future<Either<Failure, NoParam>> addProduct(
+      ProductDataEntitie productEntitie) async {
     try {
-      productsReomteDataSource.addProductAssets();
+      productsReomteDataSource.addProduct(productEntitie);
       return right(NoParam());
     } catch (e) {
       if (e is DioException) {

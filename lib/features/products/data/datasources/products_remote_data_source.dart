@@ -1,7 +1,7 @@
 part of "../../../../core/import/app_import.dart";
 
 abstract class ProductsReomteDataSource {
-  Future<void> addProductAssets();
+  Future<void> addProduct(ProductDataEntitie productEntitie);
 }
 
 class ProductsReomteDataSourceImpl extends ProductsReomteDataSource {
@@ -10,10 +10,9 @@ class ProductsReomteDataSourceImpl extends ProductsReomteDataSource {
   ProductsReomteDataSourceImpl({required this.apiService});
 
   @override
-  Future<void> addProductAssets() async {
-    dev.log("data.toString()");
-    apiService.postAddAssets(
-      endPoint: "endPoint",
+  Future<void> addProduct(ProductDataEntitie productEntitie) async {
+    List<String> uploadedImageIds = await apiService.postAddAssets(
+      endPoint: ApiKey.urlBulder(ApiKey.assets),
     );
   }
 }
