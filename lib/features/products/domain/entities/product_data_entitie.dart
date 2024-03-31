@@ -2,29 +2,30 @@ part of "../../../../core/import/app_import.dart";
 
 class ProductDataEntitie {
   String? name;
-  String? price;
+  int? price;
   String? description;
   String? categoryid;
-  List<String?>? images;
 
   ProductDataEntitie(
-      {this.name, this.price, this.description, this.images, this.categoryid});
+      {this.name, this.price, this.description, this.categoryid});
   void setName(String? value) => name = value;
-  void setPrice(String? value) => price = value;
+  void setPrice(int? value) => price = value;
   void setDescription(String? value) => description = value;
   void setCategoryId(String? value) => categoryid = value;
-  void setImages(List<String?> value) => images = value;
 
   @override
   String toString() =>
       " ProductDataModel(name: $name, price: $price, description: $description, categoryid: $categoryid)";
-  Map<String, dynamic> toJson() {
+
+  Map<String, dynamic> toMap() {
     return {
-      'name': name.toString(),
-      'price': price,
-      'description': description,
-      'categoryid': categoryid,
-      'images': images?.where((image) => image != null).toList(),
+      'product': {
+        'name': name,
+        'price': price,
+        'description': description,
+      },
     };
   }
+
+  String toJson() => json.encode(toMap());
 }

@@ -14,5 +14,9 @@ class ProductsReomteDataSourceImpl extends ProductsReomteDataSource {
     List<String> uploadedImageIds = await apiService.postAddAssets(
       endPoint: ApiKey.urlBulder(ApiKey.assets),
     );
+    String productID = await apiService.postAddProduct(
+        endPoint: ApiKey.urlBulder(ApiKey.products),
+        data: productEntitie.toJson());
+    dev.log(productID);
   }
 }

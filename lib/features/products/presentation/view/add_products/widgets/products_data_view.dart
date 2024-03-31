@@ -18,9 +18,8 @@ class ProductsDataView extends StatelessWidget {
             // * Product Name
             CustomTextForm(
               label: "Product Name",
-              //    onSaved: ,
               validator: AppValidators.checkProductName,
-              //    onSaved: cAddProducts.productDataModel.setName,
+              onSaved: cAddProducts.productEntitie.setName,
             ),
             20.verticalSpace,
             // * Price
@@ -29,7 +28,9 @@ class ProductsDataView extends StatelessWidget {
               keyboardType: TextInputType.number,
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               validator: AppValidators.checkProductPrice,
-              //    onSaved: cAddProducts.productDataModel.setPrice,
+              onSaved: (value) {
+                cAddProducts.productEntitie.setPrice(int.parse(value!));
+              },
             ),
             20.verticalSpace,
             // * Description
@@ -37,7 +38,7 @@ class ProductsDataView extends StatelessWidget {
               label: "Description",
               maxLines: 8,
               validator: AppValidators.checkProductDescription,
-              //   onSaved: cAddProducts.productDataModel.setDescription,
+              onSaved: cAddProducts.productEntitie.setDescription,
             ),
             20.verticalSpace,
             // * Category Section
